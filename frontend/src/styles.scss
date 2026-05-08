@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+@import './style/tailwind.css';
+@import 'primeicons/primeicons.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    color: var(--text-color);
+    background-color: var(--surface-ground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Noto Sans Thai';
+}
+
+a {
+    text-decoration: none;
+}
+
+// 
+// Gloabal styles for high charts
+//
+.chart {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+
+// For light mode
+// Title
+.highcharts-title {
+    fill: var(--text-color) !important;
+    font-weight: bolder !important;
+    font-family: 'Noto Sans Thai';
+}
+
+// Subtitle
+.highcharts-subtitle {
+    fill: var(--text-color-secondary) !important;
+    font-weight: bolder !important;
+    font-family: 'Noto Sans Thai';
+}
+
+// Data labels on charts
+.highcharts-data-label text {
+    fill: var(--text-color-secondary) !important;
+    font-weight: bolder !important;
+    text-decoration: none !important;
+}
+
+// Data labels on charts on hover
+.highcharts-data-label text:hover {
+    fill: var(--text-color) !important;
+    text-decoration: underline !important;
+}
+
+// X-axis labels
+.highcharts-drilldown-axis-label {
+    fill: var(--text-color-secondary) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+.highcharts-axis-title {
+    fill: var(--text-color-secondary) !important;
+    font-family: 'Noto Sans Thai';
+}
+
+// X-axis labels on hover
+.highcharts-drilldown-axis-label:hover {
+    fill: var(--text-color) !important;
+}
+
+// Y-axis title
+.highcharts-axis-line {
+    stroke: var(--text-color-secondary) !important;
+    stroke-width: 0 !important;
+}
+
+.highcharts-breadcrumbs-button {
+    width: 100% !important;
+    background-color: red !important;
+}
+
+// For dark mode
+// Data labels on charts
+.app-dark .highcharts-data-label text {
+    fill: var(--text-color-secondary) !important;
+    font-weight: bolder !important;
+    text-decoration: none !important;
+}
+
+.app-dark .highcharts-data-label text:hover {
+    fill: var(--text-color) !important;
+    text-decoration: none !important;
+}
+
+// X-axis labels
+.app-dark .highcharts-xaxis-labels text {
+    fill: var(--text-color-secondary) !important;
+    text-decoration: none !important;
+}
+
+.app-dark .highcharts-xaxis-labels text:hover {
+    fill: var(--text-color) !important;
+    text-decoration: none !important;
+}
+
+// Y-axis title
+.app-dark .highcharts-axis-title {
+    fill: var(--text-color-secondary) !important;
+}
+
+// Y-axis labels
+.app-dark .highcharts-yaxis-labels text {
+    fill: var(--text-color) !important;
+}
+
+// Grid lines
+.app-dark .highcharts-grid-line {
+    stroke: var(--text-color-secondary) !important;
+}
