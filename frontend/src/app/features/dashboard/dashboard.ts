@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { HighchartsChartComponent } from 'highcharts-angular';
 import * as Highcharts from 'highcharts';
-import { ApiService } from '../../core/services/api.service';
+import { ApiService } from '../../core/services/postgres/api.service';
 
 @Component({
   selector: 'app-dashboard',
