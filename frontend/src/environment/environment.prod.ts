@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
+    production: true,
     appName: 'Boiler Plate',
     apiUrl: "http://localhost:8000/api",
 
