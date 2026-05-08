@@ -1,0 +1,23 @@
+.highlight {
+    background-color: var(--primary-color);
+    color: var(--primary-contrast-color);
+}
+
+.highlight:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 90%, black);
+    color: var(--primary-contrast-color);
+}
+
+/* ปกติ */
+.unhighlight {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--text-color-primary);
+}
+
+/* hover light mode */
+.unhighlight:hover {
+    color: var(--text-color-primary);
+    border: 1px solid transparent;
+    background-color: var(--surface-hover);
+}

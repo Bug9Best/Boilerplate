@@ -4,11 +4,6 @@ import { AppLayout } from './layouts/app-layout/app-layout';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'overview',
-    pathMatch: 'full',
-  },
-  {
-    path: '',
     component: AppLayout,
     children: [
       {
