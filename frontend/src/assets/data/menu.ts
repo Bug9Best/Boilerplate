@@ -4,8 +4,8 @@ export class AppMenuItem {
   menu: MenuItem[] = [
     {
       label: 'ภาพรวม',
-      path: '/overview',
-      routerLink: ['/overview'],
+      path: '/dashboard',
+      routerLink: ['/dashboard'],
     },
     {
       label: 'ห้องตรวจโรคฉุกเฉิน',
