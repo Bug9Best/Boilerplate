@@ -4,6 +4,6 @@ export const authenGuard: CanActivateFn = () => {
   const token = localStorage.getItem('token');
   if (token) return true;
   const router = new Router();
-  router.navigateByUrl('/sign-in');
+  router.navigateByUrl('/login');
   return false;
 };

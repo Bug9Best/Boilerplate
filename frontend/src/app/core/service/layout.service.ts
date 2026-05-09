@@ -25,7 +25,7 @@ export class LayoutService {
         preset: 'Aura',
         primary: 'emerald',
         surface: 'gray',
-        darkTheme: false,
+        darkTheme: localStorage.getItem('darkTheme') === 'true',
         menuMode: 'static'
     });
 
@@ -60,6 +60,7 @@ export class LayoutService {
 
             if (!this.initialized || !config) {
                 this.initialized = true;
+                this.handleDarkModeTransition(config);
                 return;
             }
 
@@ -68,6 +69,7 @@ export class LayoutService {
     }
 
     private handleDarkModeTransition(config: LayoutConfig): void {
+        // @ts-ignore
         const supportsViewTransition = 'startViewTransition' in document;
 
         if (supportsViewTransition) {
@@ -78,6 +80,7 @@ export class LayoutService {
     }
 
     private startViewTransition(config: LayoutConfig): void {
+        // @ts-ignore
         document.startViewTransition(() => {
             this.toggleDarkMode(config);
         });
@@ -90,6 +93,7 @@ export class LayoutService {
         } else {
             document.documentElement.classList.remove('app-dark');
         }
+        localStorage.setItem('darkTheme', _config.darkTheme.toString());
     }
 
     onMenuToggle() {

@@ -1,0 +1,30 @@
+<div class="flex items-center justify-center min-h-screen bg-surface-50 dark:bg-surface-950 p-4">
+  <p-card styleClass="w-full max-w-md shadow-lg rounded-2xl">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl font-bold text-primary mb-2">Welcome Back</h2>
+      <p class="text-surface-500 dark:text-surface-400">Please sign in to continue</p>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <label for="email" class="font-medium text-sm">Email</label>
+        <input pInputText id="email" type="email" placeholder="admin@example.com" class="w-full" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="password" class="font-medium text-sm">Password</label>
+        <p-password id="password" [toggleMask]="true" placeholder="••••••••" styleClass="w-full" inputStyleClass="w-full"></p-password>
+      </div>
+
+      <div class="flex items-center justify-between mt-2">
+        <div class="flex items-center">
+          <input type="checkbox" id="remember" class="mr-2 rounded border-surface-300">
+          <label for="remember" class="text-sm text-surface-600 dark:text-surface-300">Remember me</label>
+        </div>
+        <a href="#" class="text-sm text-primary font-medium hover:underline">Forgot password?</a>
+      </div>
+
+      <p-button label="Sign In (Mock)" styleClass="w-full mt-4" (onClick)="onMockLogin()"></p-button>
+    </div>
+  </p-card>
+</div>
